@@ -1,0 +1,11 @@
+// Traversing Linked Data Structure and Printing Function in C
+
+void Display(NODE **start)
+{   NODE *ptr=*start;
+	while(ptr!=NULL)
+	{   
+		printf(" %d \t %X \n ",ptr->info,ptr);
+		getch();
+		ptr=ptr->link;
+	}
+}
