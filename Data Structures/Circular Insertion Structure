@@ -1,0 +1,20 @@
+void Circular-Insert(NODE **start)
+{   
+    int item;
+    NODE *ptr=*start;
+    NODE *newnode=(NODE *)malloc(sizeof(NODE));
+    newnode->link=*start;
+    printf("enter item(integer) to be inserted: \n");
+    scanf("%d",&item);
+    newnode->info=item;
+	if (ptr == NULL)
+	{
+		*start=newnode;
+	}
+	else
+	{
+		newnode->link=ptr;
+		ptr=newnode;
+		*start=ptr;
+	}
+}

@@ -1,0 +1,38 @@
+void Deletion(NODE **start)
+{   
+    int item;
+	printf("Enter Item(Integer) To Be Deleted");
+	scanf("%d",&item);
+	
+	NODE *prev=NULL, *ptr= *start;
+	if (ptr==NULL)
+	{
+		printf("Empty List, Deletion not Possible\n");
+	}
+	else
+	{
+	
+	        while( ptr->info!=item)
+        {    if(ptr->link==NULL)
+        {
+        	break;
+		}
+		    else
+			{
+			 prev=ptr;
+             ptr=ptr->link;
+			}
+        }
+        
+        if (ptr->info!=item)
+		{
+			printf("item not found");
+		}
+		else
+		{
+			prev->link=ptr->link;
+			free(ptr);
+			free(prev);
+		}
+    }
+}
