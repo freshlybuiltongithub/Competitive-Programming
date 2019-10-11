@@ -1,3 +1,5 @@
+#include<stdio.h>
+#include<stdlib.h>
 void Reversal(NODE **start)
 {
 	NODE *prev=NULL,*ptr=NULL,*fwd=*start;
