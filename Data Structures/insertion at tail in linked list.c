@@ -4,15 +4,15 @@ SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
     new->data=data;
     new->next=NULL;
     temp=head;
-    if(temp==NULL)
+    if(temp==NULL) //empty linked list case
     {
         head=new;
     }
     else
-    while(temp!=NULL)
+    while(temp!=NULL) // linked list exist 
     {
         
-        if(temp->next==NULL)
+        if(temp->next==NULL)  
         {
            temp->next=new;
            break;
