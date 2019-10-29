@@ -1,7 +1,7 @@
 SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
     SinglyLinkedListNode* temp=head;
     SinglyLinkedListNode* post=temp->next;
-    int i,pos=position;
+    int i, pos=position;
     if(pos==0)
     {
         head=temp->next;
@@ -22,5 +22,11 @@ SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
         }
     }
    return head;
+}
 
+//To check if list is empty
+void checkList(SinglyLinkedListNode* head) {
+    if(head == NULL) {
+        cout<<"List is empty";
+    }
 }
